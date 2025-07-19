@@ -4,7 +4,7 @@ email: main@oumnik.studio
 description: >- # this means to ignore newlines until "baseurl:"
   Professional studio services - OUMNIK Studio
 baseurl: "/oumnik.studio" # the subpath of your site, e.g. /blog
-url: "https://oumnik.studio" # the base hostname & protocol for your site
+url: "https://dimitarpeevzautre.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
