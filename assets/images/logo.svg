@@ -1,0 +1,14 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left angled element (orange/red) -->
+  <polygon points="20,60 80,60 120,160 60,160" fill="#C4663B" />
+  <!-- Left vertical support (black) -->
+  <rect x="55" y="160" width="10" height="30" fill="#2C2C2C" />
+  
+  <!-- Center vertical element (orange/red) -->
+  <polygon points="140,40 160,40 160,160 140,160" fill="#C4663B" />
+  
+  <!-- Right angled element (orange/red) -->
+  <polygon points="180,60 240,60 280,160 220,160" fill="#C4663B" />
+  <!-- Right vertical support (black) -->
+  <rect x="235" y="160" width="10" height="30" fill="#2C2C2C" />
+</svg>
