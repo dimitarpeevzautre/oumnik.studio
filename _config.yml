@@ -1,0 +1,32 @@
+# Site settings
+title: OUMNIK Studio
+email: main@oumnik.studio
+description: >- # this means to ignore newlines until "baseurl:"
+  Professional studio services - OUMNIK Studio
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://oumnik.studio" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# GitHub Pages specific settings
+github_username: dimitarpeevzautre
+repository: dimitarpeevzautre/oumnik.studio
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - init.md
