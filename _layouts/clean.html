@@ -12,9 +12,10 @@
   <body>
     <main class="page-content" aria-label="Content">
       {{ content }}
+      <div class="logo-container">
+        <img src="{{ "/assets/images/logo.svg" | relative_url }}" alt="OUMNIK Studio Logo" class="bottom-logo">
+      </div>
+      <a href="mailto:main@oumnik.studio" class="email-link">main@oumnik.studio</a>
     </main>
-    <div class="logo-container">
-      <img src="{{ "/assets/images/logo.svg" | relative_url }}" alt="OUMNIK Studio Logo" class="bottom-logo">
-    </div>
   </body>
 </html>
