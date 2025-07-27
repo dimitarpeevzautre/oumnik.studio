@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   padding: 40px 20px 120px 20px; // Extra bottom padding for logo space
 }
@@ -32,7 +32,7 @@ body {
 .content-container {
   max-width: 800px;
   text-align: center;
-  height: 70vh;
+  margin-bottom: 60px;
   display: flex;
   align-items: center;
 }
@@ -120,6 +120,96 @@ body {
   text-decoration: underline;
 }
 
+// New sections styles
+.services-section,
+.projects-section,
+.about-section {
+  max-width: 1000px;
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #C4663B;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  padding: 30px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  text-align: left;
+  
+  h3 {
+    color: #C4663B;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.project-item {
+  text-align: center;
+  
+  h3 {
+    color: #C4663B;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 20px 0 15px 0;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.project-image:hover {
+  transform: translateY(-5px);
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 // Responsive design
 @media (max-width: 768px) {
   .main-text {
@@ -129,10 +219,32 @@ body {
   .page-content {
     padding: 20px 15px 100px 15px;
   }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-item {
+    padding: 20px 15px;
+  }
 }
 
 @media (max-width: 480px) {
   .main-text {
     font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
   }
 }
