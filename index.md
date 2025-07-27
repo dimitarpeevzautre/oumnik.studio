@@ -3,54 +3,54 @@ layout: clean
 title: "OUMNIK Studio"
 ---
 
-<div class="content-container">
+<div id="hjem" class="content-container">
   <p class="main-text">
-    <span class="brand-name">OUMNIK Studio</span> is a Norwegian architecture practice specializing in the sustainable redesign and adaptive reuse of existing buildings. We blend user-centered design with data-driven insight to create efficient, future-ready spaces.
+    <span class="brand-name">OUMNIK Studio</span> er en norsk arkitekturpraksis som spesialiserer seg på bærekraftig redesign og adaptiv gjenbruk av eksisterende bygninger. Vi kombinerer brukersentrert design med datadrevne innsikter for å skape effektive, fremtidsklare rom.
   </p>
 </div>
 
-<div class="services-section">
-  <h2 class="section-title">Our Services</h2>
+<div id="tjenester" class="services-section">
+  <h2 class="section-title">Våre tjenester</h2>
   <div class="services-grid">
     <div class="service-item">
-      <h3>Sustainable Redesign</h3>
-      <p>Transforming existing structures with eco-friendly solutions that reduce environmental impact while enhancing functionality.</p>
+      <h3>Bærekraftig redesign</h3>
+      <p>Transformering av eksisterende strukturer med miljøvennlige løsninger som reduserer miljøpåvirkning samtidig som de forbedrer funksjonaliteten.</p>
     </div>
     <div class="service-item">
-      <h3>Adaptive Reuse</h3>
-      <p>Repurposing buildings for new functions while preserving their historical and architectural value.</p>
+      <h3>Adaptiv gjenbruk</h3>
+      <p>Omfunksjonering av bygninger til nye formål samtidig som deres historiske og arkitektoniske verdi bevares.</p>
     </div>
     <div class="service-item">
-      <h3>Data-Driven Design</h3>
-      <p>Utilizing advanced analytics and user research to inform design decisions and optimize space utilization.</p>
+      <h3>Datadrevet design</h3>
+      <p>Bruk av avansert analyse og brukerforskning for å informere designbeslutninger og optimalisere romutnyttelse.</p>
     </div>
   </div>
 </div>
 
-<div class="projects-section">
-  <h2 class="section-title">Featured Projects</h2>
+<div id="prosjekter" class="projects-section">
+  <h2 class="section-title">Utvalgte prosjekter</h2>
   <div class="projects-grid">
     <div class="project-item">
-      <img src="{{ "/assets/images/project-placeholder-1.svg" | relative_url }}" alt="Project 1" class="project-image">
-      <h3>Heritage Building Transformation</h3>
-      <p>A complete redesign of a 19th-century warehouse into modern residential spaces.</p>
+      <img src="{{ "/assets/images/project-placeholder-1.svg" | relative_url }}" alt="Prosjekt 1" class="project-image">
+      <h3>Transformasjon av kulturbygg</h3>
+      <p>En komplett redesign av et lager fra 1800-tallet til moderne boligrom.</p>
     </div>
     <div class="project-item">
-      <img src="{{ "/assets/images/project-placeholder-2.svg" | relative_url }}" alt="Project 2" class="project-image">
-      <h3>Sustainable Office Complex</h3>
-      <p>Converting an industrial facility into an energy-efficient collaborative workspace.</p>
+      <img src="{{ "/assets/images/project-placeholder-2.svg" | relative_url }}" alt="Prosjekt 2" class="project-image">
+      <h3>Bærekraftig kontorkompleks</h3>
+      <p>Konvertering av en industriell anlegg til en energieffektiv samarbeidsworkspace.</p>
     </div>
     <div class="project-item">
-      <img src="{{ "/assets/images/project-placeholder-3.svg" | relative_url }}" alt="Project 3" class="project-image">
-      <h3>Community Center Renewal</h3>
-      <p>Revitalizing a community space with flexible, multi-purpose design solutions.</p>
+      <img src="{{ "/assets/images/project-placeholder-3.svg" | relative_url }}" alt="Prosjekt 3" class="project-image">
+      <h3>Fornyelse av samfunnshus</h3>
+      <p>Revitalisering av et samfunnsrom med fleksible, multifunksjonelle designløsninger.</p>
     </div>
   </div>
 </div>
 
-<div class="about-section">
-  <h2 class="section-title">About Us</h2>
+<div id="om-oss" class="about-section">
+  <h2 class="section-title">Om oss</h2>
   <p class="about-text">
-    Founded with a commitment to sustainable architecture, OUMNIK Studio combines traditional craftsmanship with innovative technology. Our team of experienced architects and designers works closely with clients to create spaces that are not only beautiful but also environmentally responsible and functionally superior.
+    Grunnlagt med en forpliktelse til bærekraftig arkitektur, kombinerer OUMNIK Studio tradisjonelt håndverk med innovativ teknologi. Vårt team av erfarne arkitekter og designere jobber tett med kunder for å skape rom som ikke bare er vakre, men også miljømessig ansvarlige og funksjonelt overlegne.
   </p>
 </div>

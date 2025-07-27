@@ -19,6 +19,100 @@ body {
   position: relative;
 }
 
+// Mobile header styles
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.mobile-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mobile-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.mobile-nav-trigger {
+  display: none;
+}
+
+.mobile-menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 24px;
+  height: 18px;
+  justify-content: space-between;
+}
+
+.mobile-menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #C4663B;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-trigger:checked + .mobile-menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-nav-trigger:checked + .mobile-menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-trigger:checked + .mobile-menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-nav-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mobile-nav-trigger:checked ~ .mobile-nav-menu {
+  display: flex;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  transition: color 0.2s;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #C4663B;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
 // Main content container
 .page-content {
   display: flex;
@@ -26,7 +120,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding: 40px 20px 120px 20px; // Extra bottom padding for logo space
+  padding: 90px 20px 40px 20px; // Top padding for fixed header
 }
 
 .content-container {
@@ -58,6 +152,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .bottom-logo {
@@ -103,7 +198,7 @@ body {
   min-height: 200px;
 }
 
-// Email link styles
+// Email link styles (keeping for backward compatibility)
 .email-link {
   display: inline-block;
   margin-top: 24px;
@@ -210,6 +305,106 @@ body {
   text-align: left;
 }
 
+// Contact footer styles
+.contact-footer {
+  background: #f8f8f8;
+  padding: 60px 20px 40px 20px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.contact-form-section h3,
+.contact-info h3 {
+  color: #C4663B;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #C4663B;
+}
+
+.contact-form button {
+  background: #C4663B;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.contact-form button:hover {
+  background: #a34e24;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.contact-info a {
+  color: #C4663B;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+// Hide mobile header on desktop (if using default layout)
+@media (min-width: 769px) {
+  .mobile-header {
+    display: none;
+  }
+  
+  .page-content {
+    padding: 40px 20px 40px 20px;
+  }
+}
+
 // Responsive design
 @media (max-width: 768px) {
   .main-text {
@@ -217,7 +412,7 @@ body {
   }
   
   .page-content {
-    padding: 20px 15px 100px 15px;
+    padding: 90px 15px 40px 15px;
   }
   
   .section-title {
@@ -233,6 +428,15 @@ body {
   .service-item {
     padding: 20px 15px;
   }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mobile-header {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -246,5 +450,17 @@ body {
   
   .about-text {
     font-size: 1.1rem;
+  }
+  
+  .mobile-header-content {
+    padding: 10px 15px;
+  }
+  
+  .mobile-logo img {
+    height: 35px;
+  }
+  
+  .page-content {
+    padding: 80px 15px 40px 15px;
   }
 }
