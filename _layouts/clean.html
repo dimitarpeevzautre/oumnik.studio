@@ -11,12 +11,65 @@
     <link rel="icon" type="image/svg+xml" href="{{ "/assets/images/favicon.svg" | relative_url }}">
   </head>
   <body>
+    <header class="mobile-header">
+      <div class="mobile-header-content">
+        <div class="mobile-logo">
+          <img src="{{ "/assets/images/logo.svg" | relative_url }}" alt="OUMNIK Studio Logo">
+        </div>
+        <nav class="mobile-nav">
+          <input type="checkbox" id="mobile-nav-trigger" class="mobile-nav-trigger" />
+          <label for="mobile-nav-trigger" class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <div class="mobile-nav-menu">
+            <a href="#hjem" class="mobile-nav-link">Hjem</a>
+            <a href="#tjenester" class="mobile-nav-link">Tjenester</a>
+            <a href="#prosjekter" class="mobile-nav-link">Prosjekter</a>
+            <a href="#om-oss" class="mobile-nav-link">Om oss</a>
+            <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
     <main class="page-content" aria-label="Content">
       {{ content }}
       <div class="logo-container">
         <img src="{{ "/assets/images/logo.svg" | relative_url }}" alt="OUMNIK Studio Logo" class="bottom-logo">
       </div>
-      <a href="mailto:main@oumnik.studio" class="email-link">main@oumnik.studio</a>
+      
+      <footer class="contact-footer">
+        <div class="footer-content">
+          <div class="contact-form-section">
+            <h3>Kontakt oss</h3>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="navn">Navn</label>
+                <input type="text" id="navn" name="navn" required>
+              </div>
+              <div class="form-group">
+                <label for="epost">E-post</label>
+                <input type="email" id="epost" name="epost" required>
+              </div>
+              <div class="form-group">
+                <label for="melding">Melding</label>
+                <textarea id="melding" name="melding" rows="5" required></textarea>
+              </div>
+              <button type="submit">Send melding</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Kontaktinformasjon</h3>
+            <p><strong>E-post:</strong> <a href="mailto:main@oumnik.studio">main@oumnik.studio</a></p>
+            <p><strong>Adresse:</strong><br>
+            OUMNIK Studio<br>
+            [Adresse]<br>
+            [By], Norge</p>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
